@@ -13,5 +13,6 @@
 
 archive=$1
 
-wget -nc -P raw_data/ https://cbioportal-datahub.s3.amazonaws.com/"$archive"
-tar -xf raw_data/"$archive" -C raw_data/
+wget -nc -P raw_data/cbioportal https://cbioportal-datahub.s3.amazonaws.com/"$archive"
+tar -xf raw_data/cbioportal/"$archive" -C raw_data/cbioportal
+rm raw_data/cbioportal/"$archive"
